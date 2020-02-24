@@ -1,20 +1,9 @@
 <template lang="pug">
-	#app
-		Header
-		main
-			router-view
-		Footer
+	router-view
 </template>
 
 <script>
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
-
 export default {
-	name: "App",
-	components: {
-		Header,
-		Footer
-	}
+  name: "App"
 };
 </script>

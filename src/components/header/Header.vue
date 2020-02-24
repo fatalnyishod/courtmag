@@ -5,13 +5,13 @@
 			+e.logo
 			+e.UL.nav
 				+e.LI.nav-item
-					a кроссовки
+					router-link(to="Kicks") кроссовки
 				+e.LI.nav-item
-					a мода
+					router-link(to="Fashion") мода
 				+e.LI.nav-item
-					a музыка
+					router-link(to="Music") музыка
 				+e.LI.nav-item
-					a жизнь
+					router-link(to="Life") жизнь
 </template>
 
 <script>

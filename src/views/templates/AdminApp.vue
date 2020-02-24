@@ -1,12 +1,10 @@
 <template lang="pug">
-	include ../../tools/mixins.pug
-	+b.MAIN.main
-		p main
-		
+	#app
+		router-view
 </template>
 
 <script>
 export default {
-  name: "Main"
+  name: "AdminApp"
 };
 </script>
