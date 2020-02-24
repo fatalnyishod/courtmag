@@ -2,7 +2,7 @@
 	include ../../tools/mixins.pug
 	+b.HEADER.header
 		+e.wrap
-			+e.logo
+			+e.SPAN.logo KOPT
 			+e.UL.nav
 				+e.LI.nav-item
 					router-link(to="Kicks") кроссовки
