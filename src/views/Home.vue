@@ -3,25 +3,37 @@
 	+b.home
 		+e.wrap
 			+e.post--l
-				+e.H2.post-title Title here
-				+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				+e.post-wrap
-					+e.A.post-author Lorem Ipsum
-					+e.SPAN.post-date 12.02.2020
+				+e.post-img
+					img(src="@/assets/images/post-1.jpg")
+				+e.post-info
+					+e.H2.post-title Российский релиз AIR Jordan 1 «Bred»
+					+e.SPAN.post-section КРОССОВКИ
+					+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					+e.post-wrap
+						+e.A.post-author Lorem Ipsum
+						+e.SPAN.post-date 12.02.2020
 
 		+e.wrap
 			+e.post--m
-				+e.H2.post-title Title here
-				+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-				+e.post-wrap
-					+e.A.post-author Lorem Ipsum
-					+e.SPAN.post-date 12.02.2020
+				+e.post-img
+					img(src="@/assets/images/post-2.jpg")
+				+e.post-info
+					+e.H2.post-title Вирджил заебал со своими кавычками, ну реально
+					+e.SPAN.post-section КРОССОВКИ
+					+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+					+e.post-wrap
+						+e.A.post-author Lorem Ipsum
+						+e.SPAN.post-date 12.02.2020
 			+e.post--m
-				+e.H2.post-title Very long title placing right here
-				+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				+e.post-wrap
-					+e.A.post-author Lorem Ipsum
-					+e.SPAN.post-date 12.02.2020
+				+e.post-img
+					img(src="@/assets/images/post-3.jpg")
+				+e.post-info
+					+e.H2.post-title А желтые ниче такие, на 8 марта дарить
+					+e.SPAN.post-section КРОССОВКИ
+					+e.P.post-text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					+e.post-wrap
+						+e.A.post-author Lorem Ipsum
+						+e.SPAN.post-date 12.02.2020
 		
 		+e.line
 

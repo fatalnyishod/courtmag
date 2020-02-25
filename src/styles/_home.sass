@@ -10,7 +10,12 @@
 		justify-content: space-between
 		width: 100%
 		max-width: 1400px
-		margin: 4em 0 0 0
+		margin: 4em 0 2em 0
+		padding: 0 2em
+		@media #{$phone}
+			flex-direction: column
+			// margin: 2em 0 0 0
+			padding: 0 1em
 
 		&--start
 			align-items: flex-start
@@ -18,28 +23,90 @@
 	&__post
 		display: flex
 		flex-direction: column
-		border: 1px solid #000
+		align-items: flex-start
+		cursor: pointer
+		border-bottom: 1px solid rgba($dark, .1)
+		transition: border $trOn
+		@media #{$hover}
+			&:hover
+				border-bottom: 1px solid $accent
+				transition: border $trOff
+
+				.home__post-title
+					color: $accent
+					transition: color $trOff
 
 		&--l
 			width: 100%
-			padding: 2em 12em 2em 3em
+
 		&--m
-			width: 48%
-			padding: 2em 6em 2em 3em
+			width: 47%
+			@media #{$phone}
+				width: 100%
+			
+			&:first-child
+				@media #{$phone}
+					margin: 0 0 4em 0
+
+	&__post-img
+		width: 100%
+		height: 24em
+		overflow: hidden
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__post-info
+		padding: 2em 1em
+		border-top: none
+		transition: color $trOn
+		@media #{$phone}
+			padding: 2em 0.2em
 
 	&__post-title
-		margin: 0 0 auto 0
-		font-size: 4em
+		font-size: 2.5em
+		line-height: 1em
+		color: $dark
+		transition: color $trOn
+		@media #{$phone}
+			font-size: 1.5em
+	
+	&__post-section
+		margin: .2em 0 auto 0
+		font-family: 'Montserrat'
+		font-size: .7em
+		font-weight: 800
+		letter-spacing: .3em
+		text-transform: uppercase
+		color: rgba($dark, .4)
+		transition: color $trOff
+		@media #{$hover}
+			&:hover
+				color: $dark
+				transition: color $trOn
+		@media #{$phone}
+			// font-size: .em
 
 	&__post-text
-		margin: .5em 0
-		font-size: 1.5em
+		margin: 1em 0
+		padding: 0 4em 0 0
+		font-size: 1.1em
+		@media #{$phone}
+			font-size: 1em
 
 	&__post-author
 		margin: 0 .3em 0 0
 		font-size: .9em
 		font-style: italic
 		font-weight: bold
+		color: $link
+		transition: color .3s ease-out
+		@media #{$hover}
+			&:hover
+				color: $linkHover
+				transition: color 0s
 
 	&__post-date
 		font-size: .9em
@@ -50,4 +117,6 @@
 		width: 100%
 		height: 2px
 		margin: 8em 0 4em 0
-		background: #000
+		background: $accent
+		@media #{$phone}
+			display: none
