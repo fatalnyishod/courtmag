@@ -36,6 +36,7 @@
 						+e.SPAN.post-date 12.02.2020
 		
 		+e.line
+			p хуле палишь?
 
 		+e.wrap--start
 			List
