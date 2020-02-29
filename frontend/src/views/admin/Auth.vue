@@ -18,8 +18,15 @@ export default {
     password: ""
   }),
   methods: {
-    auth() {
-      console.log(this.login, this.password);
+    async auth() {
+      let result = await this.$axios.post("/api/login", {
+        email: this.login,
+        password: this.password
+      });
+      console.log(result);
+      if (result.status === 200) {
+        this.$router.push({ name: "AdminDashboard" });
+      }
     }
   }
 };

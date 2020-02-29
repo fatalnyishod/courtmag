@@ -1,6 +1,7 @@
 // root template apps
 import AdminApp from '@/views/templates/AdminApp';
 import Auth from '@/views/admin/Auth';
+import Dashboard from '@/views/admin/Dashboard';
 
 export default [
 	{
@@ -9,7 +10,15 @@ export default [
 		children: [
 			{
 				path: 'auth',
-				component: Auth,
+				component: Auth
+			},
+			{
+				path: 'dashboard',
+				name: "AdminDashboard",
+				component: Dashboard,
+				meta: {
+					auth: true
+				},
 				children: []
 			}
 		]
