@@ -10,7 +10,8 @@ Vue.use(VueRouter);
 const routes = [...User, ...Admin];
 
 const router = new VueRouter({
-	routes
+	routes,
+	linkExactActiveClass: 'header__nav-item--active'
 });
 
 export default router;

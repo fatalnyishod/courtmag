@@ -16,20 +16,28 @@
 		padding: 0 2em
 
 	&__logo
-		font-family: $sans
 		font-size: 3.5em
-		font-weight: 900
 		letter-spacing: 8px
+		font-family: $sans
+		font-weight: 900
 		color: $light
 		cursor: default
-		transition: color 6s linear
-		@media #{$hover}
-			&:hover
-				color: $accent
-				transition: color 0s
-		@media #{$phone}
-			width: 100%
-			text-align: center
+		transition: color .3s linear
+		
+		span
+			color: $light
+			cursor: default
+			@media #{$hover}
+				&:hover
+					color: $accent
+					transition: color 0s
+			@media #{$phone}
+				width: 100%
+				text-align: center
+		
+		a
+			color: $light
+			cursor: pointer
 
 	&__nav
 		display: flex
@@ -39,17 +47,29 @@
 			display: none
 
 	&__nav-item
-		padding: .5em 0
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0
 		margin: 0 1.8em
-		border-bottom: 2px solid $light
-		cursor: pointer
 		transition: border $trOn
 		font-size: 1.1em
-		@media #{$hover}
-			&:hover
-				border-bottom: 2px solid $accent
-				transition: border $trOff
-
+		
 		a
+			width: inherit
+			height: inherit
+			padding: .5em 0
+			border-bottom: 2px solid $light
 			color: $light
+			@media #{$hover}
+				&:hover
+					border-bottom: 2px solid $accent
+					transition: border $trOff
+
+		&--active
+			span
+				padding: .5em 0
+				color: $accent
+				cursor: default
+				border-bottom: 2px solid $accent
 

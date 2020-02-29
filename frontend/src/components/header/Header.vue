@@ -2,16 +2,31 @@
 	include ../../tools/mixins.pug
 	+b.HEADER.header
 		+e.wrap
-			+e.SPAN.logo KOPT
+			router-link(to="/" v-slot="{ href, route, navigate, isExactActive}")
+				+e.DIV.logo
+					span(v-if="isExactActive") KOPT
+					a(v-else :href="href" @click="navigate") KOPT
+
 			+e.UL.nav
-				+e.LI.nav-item
-					router-link(to="Kicks") кроссовки
-				+e.LI.nav-item
-					router-link(to="Fashion") мода
-				+e.LI.nav-item
-					router-link(to="Music") музыка
-				+e.LI.nav-item
-					router-link(to="Life") жизнь
+				router-link(to="Kicks" v-slot="{ href, route, navigate, isExactActive }")
+					+e.LI(:class="[isExactActive && 'header__nav-item--active']").nav-item
+						span(v-if="isExactActive && 'header__nav-item--active'") кроссовки
+						a(v-else :href="href" @click="navigate") кроссовки
+				
+				router-link(to="Fashion" v-slot="{ href, route, navigate, isExactActive }")
+					+e.LI(:class="[isExactActive && 'header__nav-item--active']").nav-item
+						span(v-if="isExactActive && 'header__nav-item--active'") мода
+						a(v-else :href="href" @click="navigate") мода
+				
+				router-link(to="Music" v-slot="{ href, route, navigate, isExactActive }")
+					+e.LI(:class="[isExactActive && 'header__nav-item--active']").nav-item
+						span(v-if="isExactActive && 'header__nav-item--active'") музыка
+						a(v-else :href="href" @click="navigate") музыка
+				
+				router-link(to="Life" v-slot="{ href, route, navigate, isExactActive }")
+					+e.LI(:class="[isExactActive && 'header__nav-item--active']").nav-item
+						span(v-if="isExactActive && 'header__nav-item--active'") жизнь
+						a(v-else :href="href" @click="navigate") жизнь
 </template>
 
 <script>
