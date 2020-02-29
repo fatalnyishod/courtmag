@@ -25,7 +25,7 @@ export default {
       });
       console.log(result);
       if (result.status === 200) {
-        this.$router.push({ name: "AdminDashboard" });
+        this.$router.push({ name: "AdminHome" });
       }
     }
   }
